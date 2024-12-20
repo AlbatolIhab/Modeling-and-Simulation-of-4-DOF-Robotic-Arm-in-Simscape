@@ -1,0 +1,2 @@
+# Modeling-and-Simulation-of-4-DOF-Robotic-Arm-in-Simscape
+Modeling and simulation of a 4-DOF robotic arm using Simscape Multibody was performed. The arm was designed in Solidworks and imported into Simscape for analysis. To evaluate movement accuracy, a trajectory was implemented and solved using inverse and forward kinematics. Performance was assessed by comparing trajectories before and after solution.
