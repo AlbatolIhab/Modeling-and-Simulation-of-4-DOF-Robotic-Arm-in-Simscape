@@ -1,0 +1,1 @@
+[robotarm , arminfo]=importrobot('robot')
