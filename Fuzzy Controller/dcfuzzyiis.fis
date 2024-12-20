@@ -1,0 +1,49 @@
+[System]
+Name='dcfuzzyiis'
+Type='sugeno'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=9
+AndMethod='prod'
+OrMethod='probor'
+ImpMethod='prod'
+AggMethod='sum'
+DefuzzMethod='wtaver'
+
+[Input1]
+Name='e'
+Range=[-1 1]
+NumMFs=3
+MF1='Neg':'trimf',[-1.8 -1 -0]
+MF2='zero':'trimf',[-1 0 1]
+MF3='pos':'trimf',[0.0338266384778012 1 1.83]
+
+[Input2]
+Name='edot'
+Range=[-1 1]
+NumMFs=3
+MF1='DNeg':'trimf',[-1.83 -1 -0]
+MF2='Dzero':'trimf',[-1 0 1]
+MF3='Dpos':'trimf',[0 1 1.83]
+
+[Output1]
+Name='u'
+Range=[-1 1]
+NumMFs=5
+MF1='NegB':'constant',[-2]
+MF2='neg':'constant',[-1]
+MF3='zero':'constant',[0]
+MF4='pos':'constant',[1]
+MF5='posB':'constant',[2]
+
+[Rules]
+1 1, 1 (1) : 1
+1 2, 2 (1) : 1
+1 3, 3 (1) : 1
+2 1, 2 (1) : 1
+2 2, 3 (1) : 1
+2 3, 4 (1) : 1
+3 1, 3 (1) : 1
+3 2, 4 (1) : 1
+3 3, 5 (1) : 1
